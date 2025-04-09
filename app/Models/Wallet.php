@@ -12,11 +12,12 @@ class Wallet extends Model
     protected $table = "wallets";
 
     protected $fillable = [
+        'id',
         'user_id',
         'balance',
     ];
 
-    public function user(): BelongsTo
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
